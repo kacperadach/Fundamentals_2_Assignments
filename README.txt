@@ -1,0 +1,1 @@
+These are the answers to the homework assignments for Fundamentals of Computer Science 2.
