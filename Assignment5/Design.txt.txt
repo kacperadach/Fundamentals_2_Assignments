@@ -1,0 +1,54 @@
+There are 3 classes in my game: Apple, Basket, AppleGame.
+
+The Apple class is the data definition for the falling apples in the game.
+
+The Apple class has 3 data members:
+	- x
+	- y
+	- speed
+
+X and Y describe the location of the Apple and speed is a constant final (= 10) which describes the speed at which the Apple moves.
+
+The Apple class has three methods:
+	- moveDown()
+	- onTheGround()
+	- fall()
+
+moveDown() simply returns an Apple with its y increased by the speed.
+onTheGround() returns a boolean of where an Apple has reached the bottom of the game screen.
+fall() uses the two prior function to determine what kind of Apple should be returned. If the apple returns false for onTheGround() it just uses moveDown() but if it returns true, a new Apple is created with random x and y.
+
+The Basket class has 3 data members:
+	- speed
+	- length
+	- x
+
+Speed and length are constant finals that describe the speed at which the basket moves and the length of the basket. X describes the position of the basket.
+
+The Basket class has one method:
+	- moveOnKey(String ke)
+
+moveOnKey(String ke) takes the String ke, if ke is "left" then the function returns a new Basket with the x moved by the speed to the left, and to the right for "right". Any other input is ignored.
+
+
+The AppleGame class has 5 data members:
+	- width
+	- height
+	- caught
+	- a
+	- b
+
+Width and height describe the dimensions of the game scene. Caught is the number of apples caught, a is an arraylist of apples, and b is the basket.
+
+The AppleGame class has 3 methods:
+	- caughtApple(Apple a, Basket b)
+	- onTick()
+	- onKeyEvent(String ke)
+	- worldEnds()
+	- makeScene()
+
+CaughtApple(Apple a, Basket b) takes a basket and an apple and returns a boolean value equal to whether that apple is caught in that basket.
+onTick() tells the game how to move the apples on each clock tick.
+onKeyEvent(String ke) takes a string keyvalue and uses the basket moveOnKey to control the backet
+worldEnds() is a function that dictates when the game is over and what scene to show.
+makeScene() is the drawing function that draws each frame.

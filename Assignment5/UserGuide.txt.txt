@@ -1,0 +1,6 @@
+How to play:
+
+1) Launch the game.
+2) Two apples will begin falling from the Apple tree. Move the "basket" at the bottom of the screen using the left and right keys.
+3) if the apple hits the basket the amount of caught apples will increment.
+4) Once you catch 10 apples, you win!
